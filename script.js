@@ -11,11 +11,11 @@ function fetchLastFm() {
         for (i = 0; i < noOfTracks; i++) {
             var array_no = i;
             var artist = data.recenttracks.track[i].artist["#text"];
-            var image = data.recenttracks.track[i].image[0]["#text"];
+            var image = data.recenttracks.track[i].image[1]["#text"];
             var album = data.recenttracks.track[i].album["#text"];
             var music_name = data.recenttracks.track[i].name;
             var url = data.recenttracks.track[i].url;
-            table.innerHTML = table.innerHTML + '<tr><td><img src="' + image + '" alt="Album Art"></td><td>' + music_name + '</td><td>' + album + '</td><td>' + artist + '</td><td>Time</td><td><a href="' + url + '">Click Me</a></td></tr>';
+            table.innerHTML = table.innerHTML + '<tr><td><img src="' + image + '" alt="Album Art" height="50"></td><td>' + music_name + '</td><td>' + album + '</td><td>' + artist + '</td><!--<td>Time</td>--><td><a href="' + url + '">Click Me</a></td></tr>';
         }
     }).catch(err => {
         console.error(err);
