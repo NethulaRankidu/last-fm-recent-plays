@@ -2,7 +2,7 @@ function fetchLastFm() {
     var user = document.getElementById("user");
     var api_key = "acfeec3209175b5e98742ef49241e75a";
 
-    fetch('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user='+user.value+'&api_key=' + api_key + '&format=json').then(response => {
+    fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user='+user.value+'&api_key=' + api_key + '&format=json').then(response => {
         return response.json();
     }).then(data => {
         console.log("Success");
